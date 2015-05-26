@@ -1,0 +1,49 @@
+/* This is a CSS comment.*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+
+header {
+	background-color: rgb(106,109,55);
+	font-family: gill sans;
+	color: white;
+	text-align: center;
+}
+
+body {
+  font-family: gill sans;
+
+}
+
+h2 {
+	color: rgb(106,109,55);
+}
+
+h3 {
+	color: rgb(84,55,109);
+}
+
+h4 {
+	color: #B3B94B;
+}
+
+.Lesson {
+    width:100%;
+    display:inline-block;
+   	border:2px solid rgb(180,180,180);
+   	margin:10px;
+   	padding:5px;
+}
+
+.Topic {
+	color:rgb(75,75,75);
+}
+
+
+/*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+*/

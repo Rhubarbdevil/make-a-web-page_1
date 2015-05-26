@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="notes_style.css">
+	<title>Intro to Programming Notes</title>
+</head>
+
+<body>
+	<header>
+	  <h1>Notes from Intro to Programming Nanodegree</h1>
+	</header>
+
+
+  <div class="Lesson">
+    <h2>Lesson 1.1</h2>
+      <div class="Topic">
+        <h3>The Web (i.e. the Internet)</h3>
+          The web consists of:<br>
+          <em>Servers</em> --> hold the content (HTML documents)<br>
+          <em>HTTP requests</em> --> sent from browser to server to get the correct HTML docs<br>
+          <em>Browsers</em> --> interpret the HTML docs for a user's computer<br>
+          <em>Computers</em> --> where people interact with the internet (via browsers)<br>
+          <br>
+          <a href = "https://www.udacity.com/course/viewer/#!/c-nd000/l-3873828673/e-48329854/m-48480496">This video</a> has a good explanation.<br>
+      </div>
+      <div class="Topic">
+        <h3>HTML</h3>
+          <p>
+            HTML stands for Hypertext Markup Language.
+            While there are many types of documents (text, images, videos, etc.) 
+            on the web, HTML docs are the main type of document making up the internet.
+          </p>
+          <p>
+            HTML is made up of:<br>
+            <em>Text content</em> (what you see on webpages)<br>
+            <em>Markup</em> (what the text looks like - its formatting)<br>
+            <em>References to other documents</em> (e.g. images and videos)<br>
+            <em>Links</em> (to other webpages) 
+          </p>
+          <p>
+            Markup is made of tags. Tags are indicated by angle brackets.<br>
+            An opening tag + contents + closing tag is an <b>element</b>:
+          </p>
+          <p>
+            <em>element = &lt;tag&gt; contents &lt;/tag&gt;</em>
+          </p>
+          <p>
+            <b>Attributes</b> go inside tags and assign the tag a value. For instance,
+            &lt;a&gt; is the anchor tag. If you add the href attribute, and assign
+            a web address, you have created a link. The text of the link will
+            be whatever is in the contents of the tag.
+          </p>
+          <p>
+            IMAGE tags (img) are an example of <b>void</b> tags. That means they don't
+            have closing tags. Void tags have no content.
+          </p>
+          <p>
+            Image tags have two attributes, the source (src) -- a web address 
+            where the image is stored -- and an alternate (alt), which is what
+            will be shown in the event of a broken request (usually "text").
+          </p>
+          <p>
+            HTML treats all whitespace as a single space. That means tags are 
+            necessary to create formatting and whitespace.
+          </p>
+          <p>
+            &lt;br&gt; &lt;/br&gt; is the tag for a line break<br>
+            &lt;p&gt; &lt;/p&gt; is the tag for a paragraph
+          </p>
+          <p>
+            There are two different types of line/paragraph tag, because they
+            are functionally different. br is an <b>inline tag</b> -- it just ends the
+            line of text. p is a <b>block tag</b>. Block tags create a "box" around the contents of the tag.
+          </p>
+          <p>
+            HTML docs generally consist of a HEAD and a BODY. The head contains 
+            metadata about the doc, while the body contains the actual content (what 
+            will appear on the web).
+          </p>
+      </div>
+  </div>
+    
+    
+  <div class="Lesson">
+    <h2>Lesson 1.2</h2>
+      <div class="Topic">
+        <h3>Structure and Style</h3>
+        
+          <p>HTML and CSS are both languages. HTML files are the <em>structure</em> of a website, while CSS files provide the <em>style</em>.</p>
+          
+          <p><b>Analogy</b>: HTML is like the walls, floors and ceilings, while CSS is like the color of the walls and how it's decorated.</p>
+          
+          <p>HTML docs have a "tree-like" structure. This structure is the Document Object Model, or <b>DOM</b>.</p>
+          
+          <p>HTML turns tags into elements in the DOM.</p>
+          
+          <p>Webpages can be broken down into boxes. One of the first steps of analyzing a webpage is to "boxify" it, 
+          or identify all the boxes used or planned to be used.</p>
+      </div>
+  
+  </div>
+  
+  <div class="Lesson">
+    <h2>Lesson 1.3</h2>
+      <div class="Topic">
+        <h3>General Note</h3>
+          <p>
+            You must always use &lt;!DOCTYPE html&gt;
+            at the top of your document, before the &lt;html&gt; tag. 
+          </p>
+        <h3>Styling and CSS</h3>
+          <p>
+          </p>
+            <h4>CSS Controls the Style of HTML</h4>
+              <p>
+              CSS stands for Cascading Style Sheets. "Cascading" because the computer looks down through all the rules
+              until it finds the one most specific to that element. That rule then gets applied.
+              
+              </p>
+            <h4>How to Use CSS</h4>
+              <p>There are three ways to add CSS to your HTML doc:</p>
+                <p>1. You can write CSS in the &lt;head&gt; of your document. To do this, you add a &lt;style&gt; &lt;/style&gt; element to 
+                your document above the &lt;html&gt;.<br>
+                2. You can create a separate CSS file and &lt;link&gt; it to the HTML document
+              in order to add style.<br>
+                3. You can write your style inline with your HTML</p>
+            <h4>Why #3 Above is a BAD IDEA</h4>
+              <p>Repetition. If you write your style inline with your HTML, you will have
+                to potentially add the same style/code over and over and over again. No one wants
+                to do that, and no one respects coders who do that. The great thing about computers
+                is they let you automate tedious tasks. So, instead of re-writing the same style code
+                over and over, you can simply assign that style to a <b>selector</b> (an element type
+                or a class that you assign to an element.) The computer will
+                then style any instance of that selector the same way.
+              </p>
+            <h4>Inheritance</h4>
+              <p>Inheritance is a key feature of CSS. Any styling assigned an element
+                is "inherited" by any element contained inside the styled element. For
+                instance, if &lt;h1&gt; is styled to be blue, and the element <b>&lt;em&gt;<em>for 
+                example</em>&lt;/em&gt;</b> is inside an &lt;h1&gt; heading, if no other styling
+                is assigned to &lt;em&gt; elements, it will inherit the blut styling from the heading.
+              </p>
+                
+              <p> Generally speaking, any text-related properties are inherited, but
+                box-related properties are not.
+              </p>
+            <h4>Clarifying Div and Span</h4>
+              <p>
+                &lt;div&gt; and &lt;span&gt; are both containers. The &lt;div&gt; tag is a block tag, and is used
+                to control layout (think boxes). The &lt;span&gt; tag is inline, and is used to style
+                text (i.e. text decorations and enclosing inline elements).
+              </p>
+            <h4>ID's and Classes</h4>
+              <p><em>id</em> is an attribute that uniquely identifies an element. <em>class</em> is an attribute
+                that styles things that are similar to each other.
+              </p>
+            <h4>The Box Model</h4>
+              <img src="http://i.imgur.com/t6DjmK5.gif" title="source: imgur.com" alt="Box Model" height=256>
+              <p>
+                It can be hard to space your boxes correctly, because they have margins,
+                borders and padding around the content. There are two ways to handle box size issues:
+              </p>
+                
+              <p>
+                1. Set box sizes in terms of percentages, not pixels<br>
+                2. Set the box-sizing attribute to border-box
+              </p>
+                <h5><em>Flex Box</em></h5>
+                  <p>
+                    Adding the rule display: flex to all elements will override the rule
+                    that makes each div take up the width of the page. This allows side-by-side
+                    boxes.
+                  </p>
+      </div>
+    <div class = "Topic">
+      <h3>Coding Methodolgy</h3>
+        <h4>Code, Test, Refine</h4>
+          <p>
+            The basic methodology for writing programs is to write code, test it, then refine.
+            Tips for approaching your web page:
+          </p>
+          <p>
+            1. Work on the structure and get it right - BOXIFY<br>
+            2. Work on the tags<br>
+            3. Work on the size of the boxes<br>
+            4. Work on the positioning of the boxes<br>
+            5. Work on the smaller details
+          </p>
+          <p>
+            To reiterate:
+          </p>
+          <p>
+            1. Look for natural boxes
+            2. Look for repeated styles and semantic elements
+            3. Write the HTML
+            4. Apply your styles from BIGGEST to smallest
+            5. Fix the details
+          </p>
+          <p>
+            Use dev tools during your testing and refining.
+          </p>
+    </div>
+  </div>
+
+</body>
+</html>
